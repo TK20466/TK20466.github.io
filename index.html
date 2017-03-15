@@ -102,10 +102,10 @@
 
 <h2>NPCs</h2>
 <code>
-    &lt;npc name="Example NPC" rank="nemesis" brawn="3" agility="2" intelligence="2" willpower="2" cunning="3" presence="4" soak="3" wounds="15" strain="10"&gt;
-        &lt;skills athletics="2" ranged-light="4" /&gt;
-        &lt;abilities&gt;Add &lt;boost&gt;&lt;/boost&gt; when making a Persuasion Check&lt;/abilities&gt;
-        &lt;weapon name="frag grenades" skill="Ranged (Light)" damage="2" pierce="5" blast="9" critical="5" range="short" ammo="1" quantity="3"&gt;&lt;/weapon&gt;
+    &lt;npc name="Example NPC" rank="nemesis" brawn="3" agility="2" intelligence="2" willpower="2" cunning="3" presence="4" soak="3" wounds="15" strain="10"&gt;<br />
+        &lt;skills athletics="2" ranged-light="4" /&gt;<br />
+        &lt;abilities&gt;Add &lt;boost&gt;&lt;/boost&gt; when making a Persuasion Check&lt;/abilities&gt;<br />
+        &lt;weapon name="frag grenades" skill="Ranged (Light)" damage="2" pierce="5" blast="9" critical="5" range="short" ammo="1" quantity="3"&gt;&lt;/weapon&gt;<br />
     &lt;/npc&gt;
 </code>
 <h5>Result</h5>
@@ -114,6 +114,42 @@
     <abilities>Add <boost></boost> when making a Persuasion Check</abilities>
     <weapon name="frag grenades" skill="Ranged (Light)" damage="2" pierce="5" blast="9" critical="5" range="short" ammo="1" quantity="3"></weapon>
 </npc>
+
+
+<h2>containers</h2>
+
+<h3>narrative text</h3>
+<code>
+    &lt;narrative&gt;<br />
+        &lt;p&gt;<br />
+            "The Empire is on the verge of success.  Soon peace and order will be restored throughout the galaxy.  Even now our capable forces lead by Darth Vader are striking back at the rebel insurgents."
+        &lt;/p&gt;<br />
+    &lt;/narrative&gt;<br />
+</code>
+<h5>Result</h5>
+<narrative>
+    <p>"The Empire is on the verge of success.  Soon peace and order will be restored throughout the galaxy.  Even now our capable forces lead by Darth Vader are striking back at the rebel insurgents."</p>
+</narrative>
+
+
+<h3>mechanic text</h3>
+<code>
+    &lt;blackbox title="how dice work"&gt;<br />
+        &lt;p&gt;<br />
+            Success &lt;success&gt;&lt;/success&gt; rolls mean your character successfully completed a task.
+        &lt;/p&gt;<br />
+        &lt;p&gt;<br />
+            Failure &lt;failure&gt;&lt;/failure&gt; rolls mean your character failed at completing a task.
+        &lt;/p&gt;<br />
+    &lt;/blackbox&gt;<br />
+</code>
+<h5>Result</h5>
+<blackbox  title="how dice work">
+    <p>Success <success></success> rolls mean your character successfully completed a task.</p>
+    <p>Failure <failure></failure> rolls mean your character failed at completing a task.</p>
+</blackbox>
+
+
 
 
 </body>
