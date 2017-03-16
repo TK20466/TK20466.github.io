@@ -9,4 +9,5 @@ code {
 
 code.inline {
    padding: 2px;
+   display: inline;
 }
