@@ -3,10 +3,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/styles/swrpgaor.min.css">
   <link rel="stylesheet" href="/styles/examples.css">
+  <title>SWRPG AngularJS Directives by Sarah Bailey</title>
 </head>
 <body ng-app="myApp" ng-cloak>
 
 <p>These documents are a WIP.  Please view the source code for a full list of directives and attributes.</p>
+
+<h2>Setup</h2>
+<p>You'll need to reference both swaor.min.js and swaor.min.css in your project.  They must be refereneced <i>after</i> AngularJS core is referenced.</p>
+<p>Finally, you'll need to reference the module in your main angularJS app, for example: <code>var app = angular.module("myApp", ["swaor"]);</code></p>
+
+<p>Full Example</p>
+<pre>
+   <code>
+      &lt;!DOCTYPE html&gt;
+      &lt;html lang="en" &gt;
+         &lt;head&gt;
+           &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+           &lt;link rel="stylesheet" href="/styles/swrpgaor.min.css"&gt;
+           &lt;title&gt;My Campaign&lt;/title&gt;
+         &lt;/head&gt;
+         &lt;body ng-app="myApp" ng-cloak&gt;
+            &lt;h1&gt;A long time ago in a galaxy far far away...&lt;/h1&gt;
+         &lt;/body&gt;
+         &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"&gt;&lt;/script&gt;
+         &lt;script src="/scripts/swrpgaor.min.js"&gt;&lt;/script&gt;
+         &lt;script&gt;
+         var app = angular.module("myApp", ['swaor'])
+         &lt;/script&gt;
+      &lt;/html&gt;
+   </code>
+</pre>
+
 
 <h2>Typography</h2>
 <pre>
