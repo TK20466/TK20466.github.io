@@ -6,3 +6,7 @@ code {
     border: 1px solid #999;
     overflow: auto;
 }
+
+code.inline {
+   padding: 2px;
+}
