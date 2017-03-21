@@ -1,12 +1,19 @@
 <html lang="en" >
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/styles/swrpgaor.min.css">
+  <link rel="stylesheet" href="/styles/swrpg.min.css">
   <link rel="stylesheet" href="/styles/examples.css">
   <title>SWRPG AngularJS Directives by Sarah Bailey</title>
 </head>
 <body ng-app="myApp" ng-cloak>
 <h1>SWRPG AngularJS Directives</h1>
+<h3>Chose your theme</h3>
+<div ng-controller="ThemeController">
+<theme-switcher urls="[theme.url]"></theme-switcher>
+<ul class="dropdown-menu" role="menu">
+        <li ng-repeat="theme in themes"><a ng-href="javascript:{{currentLocation}}" ng-click="setTheme(theme)">{{theme.name}}</a> - {{theme.description}}</li>
+</ul>
+</div>
 <h3>Table of Contents</h3>
 <ul>
    <li><a href="#download">Download</a></li>
@@ -203,8 +210,9 @@ Make a <check skill="Opposed Charm vs Discipline" dif="2" chg="1"></check> to ta
 <p>Tables add a nice flare to your documents, letting you organize suggestions, results, or other information in a handy and visually stimulating way.  It is highly suggested that you use the <a href="https://github.com/awerlang/angular-responsive-tables">Angular Responsive Table</a> plugin to make your tables pivot on mobile views such as phones.</p>
 <pre>
    <code>
-      &lt;h6&gt;Table 1 - 1: Event Seeds&lt;/h6&gt;
+      
       &lt;table&gt;
+          &lt;caption&gt;Table 1 - 1: Event Seeds&lt;/caption&gt;
           &lt;thead&gt;
               &lt;tr&gt;
                   &lt;th&gt;Event Seed&lt;/th&gt;
@@ -238,8 +246,8 @@ Make a <check skill="Opposed Charm vs Discipline" dif="2" chg="1"></check> to ta
    </code>
 </pre>
 
-<h6>Table 1 - 1: Event Seeds</h6>
 <table>
+    <caption>Table 1 - 1: Event Seeds</caption>
     <thead>
         <tr>
             <th>Event Seed</th>
@@ -279,13 +287,17 @@ Make a <check skill="Opposed Charm vs Discipline" dif="2" chg="1"></check> to ta
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-aria.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-messages.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
 
 <!-- Angular Material Library -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
-<script src="/scripts/swrpgaor.min.js"></script>
+<script src="/scripts/swrpgwc.min.js"></script>
 <script>
-var app = angular.module("myApp", ['swaor'])
+var app = angular.module("myApp", ['swrpgwc']);
+
 </script>
+
+
 
 </html>
