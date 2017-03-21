@@ -7,13 +7,12 @@
 </head>
 <body ng-app="myApp" ng-cloak>
 <h1>SWRPG AngularJS Directives</h1>
-<h3>Chose your theme</h3>
-<div ng-controller="ThemeController">
-<theme-switcher urls="[theme.url]"></theme-switcher>
-<ul class="dropdown-menu" role="menu">
-        <li ng-repeat="theme in themes"><a ng-href="javascript:{{currentLocation}}" ng-click="setTheme(theme)">{{theme.name}}</a> - {{theme.description}}</li>
-</ul>
-</div>
+<h2>What is it?</h2>
+<p>
+This project is a set of CSS and AngularJS components that enable webmasters to theme their webpages as the FFG Star Wars RPG books, helping them on focusing on their custom content following the same style on the books.
+</p>
+<p>These documents are a WIP.  Please view the source code for a full list of directives and attributes.</p>
+
 <h3>Table of Contents</h3>
 <ul>
    <li><a href="#download">Download</a></li>
@@ -23,7 +22,13 @@
    <li><a href="#wrappers">Containers</a></li>
 </ul>
 
-<p>These documents are a WIP.  Please view the source code for a full list of directives and attributes.</p>
+<h3>Chose your theme</h3>
+<div ng-controller="ThemeController">
+<theme-switcher urls="[theme.url]"></theme-switcher>
+<ul class="dropdown-menu" role="menu">
+        <li ng-repeat="theme in themes"><a ng-href="javascript:{{currentLocation}}" ng-click="setTheme(theme)">{{theme.name}}</a> - {{theme.description}}</li>
+</ul>
+</div>
 
 <h2 id="download">Download</h2>
 <p>You can get SWRPG AngularJS Directive on our <a href="https://github.com/TK20466/RPG-Web-Components/releases">Github Project</a> page. For a quick-start, just download the zip file of the latest version. If you want to mess around with our source code, you can download it or even clone and/or fork it.</p>
